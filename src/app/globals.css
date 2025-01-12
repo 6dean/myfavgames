@@ -1,3 +1,235 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  overflow-x: hidden; /* Empêche le scroll horizontal */
+  background: repeating-linear-gradient(
+    0deg,
+    /* Angle du motif */ #141414,
+    /* Première couleur */ #414141 2px,
+    /* Taille du motif */ #1a1a1a 2px,
+    /* Deuxième couleur */ #3a3a3a 5px /* Taille du motif */
+  );
+  border: 2px solid red;
+  height: 100vh;
+}
+
+body {
+  width: 100%;
+}
+
+.page-game {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0px 5px 8px 0px rgb(35, 35, 35);
+}
+
+.categories {
+  display: flex;
+  justify-content: center; /* Centre les catégories horizontalement */
+  align-items: center; /* Aligne verticalement */
+}
+
+.button-logo {
+  background: linear-gradient(to bottom, #d0d0d0, #969696);
+  /* Gris clair avec un léger dégradé */
+  color: rgba(55, 55, 55, 0.393);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex; /* Flex pour centrer verticalement */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  padding: 5px; /* Réduction de l'espace interne */
+  font-size: 15px; /* Taille de police plus petite */
+  flex: 1; /* Rend les boutons flexibles pour occuper l'espace */
+  border-right: 1px solid #a0a0a0; /* Séparation entre les boutons */
+}
+
+.button-logo-select {
+  background: linear-gradient(to bottom, #d0d0d0, #8e8e8e);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex; /* Flex pour centrer verticalement */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  padding: 5px; /* Réduction de l'espace interne */
+  font-size: 14px; /* Taille de police plus petite */
+  flex: 1; /* Rend les boutons flexibles pour occuper l'espace */
+  border-right: 1px solid #a0a0a0; /* Séparation entre les boutons */
+}
+
+.button-logo:first-child {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.button-logo:last-child {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.button-logo:hover {
+  background: linear-gradient(
+    to bottom,
+    #d0d0d0,
+    #b0b0b0
+  ); /* Effet au survol */
+}
+
+.img_gray {
+  filter: grayscale(100%);
+}
+.game-page-container {
+  overflow: hidden;
+}
+
+.slider-container img {
+  max-height: 600px; /* Limite la hauteur maximale */
+  width: max-content; /* Garde les proportions de l'image */
+  object-fit: contain; /* Évite de cropper l'image */
+}
+
+.slick-center img {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0px 12px 1px rgba(255, 255, 255, 0.576); /* Halo lumineux diffus */
+}
+
+/* Style des images dans chaque slide */
+.slick-slide img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease-in-out, box-shadow 0.3s ease;
+}
+
+.slick-slide img:hover {
+  cursor: pointer;
+}
+
+/* Style pour les autres images (plus petites) */
+.slick-slide:not(.slick-center) img {
+  border-radius: 5px;
+  transform: scale(0.8); /* Réduit la taille des images autour */
+  transform-origin: bottom center;
+  filter: grayscale(90%);
+  padding-top: 15px;
+  opacity: 40%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slider-container {
+  overflow: hidden; /* Masque tout débordement */
+}
+
+.title-logo {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 380px;
+}
+
+.card-game {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+
+.title-game {
+  font-size: 40px;
+  font-weight: 600;
+  color: whitesmoke;
+}
+
+.text-info {
+  color: rgba(0, 0, 0, 0.675);
+}
+
+.text-card {
+  color: whitesmoke;
+}
+
+.text-red {
+  background-color: red;
+  border: 1px solid rgba(255, 255, 255, 0.811);
+  padding: 1px;
+  font-weight: 700;
+  color: white;
+  min-width: 40px;
+  text-align: center;
+}
+
+.text-orange {
+  background-color: rgb(255, 116, 2);
+  border: 1px solid rgba(255, 255, 255, 0.811);
+  padding: 1px;
+  font-weight: 700;
+  color: white;
+  min-width: 40px;
+  text-align: center;
+}
+
+.text-light-orange {
+  background-color: #ffb700;
+  border: 1px solid rgba(255, 255, 255, 0.811);
+  padding: 1px;
+  font-weight: 700;
+  color: white;
+  min-width: 40px;
+  text-align: center;
+}
+
+.text-green {
+  background-color: rgba(149, 255, 0, 0.777);
+  border: 1px solid rgba(255, 255, 255, 0.811);
+  padding: 1px;
+  font-weight: 700;
+  color: white;
+  min-width: 40px;
+  text-align: center;
+}
+
+.text-white {
+  background-color: rgba(0, 255, 13, 0.714);
+  border: 1px solid rgba(255, 255, 255, 0.276);
+  padding: 1px;
+  font-weight: 600;
+  color: white;
+  min-width: 40px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.game-info {
+  min-width: 380px;
+}
+
+.logo-jvc {
+  display: flex;
+  justify-content: center;
+}
+
+.game-description {
+  min-width: 380px;
+}
+
+.game-staff {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
