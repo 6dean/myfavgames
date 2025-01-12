@@ -1,6 +1,7 @@
+"use server";
 export default async function apiGames() {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-  const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+  const apiUrl = process.env.API_URL;
+  const apiKey = process.env.API_KEY;
 
   if (apiKey) {
     try {
