@@ -96,10 +96,17 @@ body {
   overflow: hidden;
 }
 
+.empty-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+}
+
 .slider-container img {
-  max-height: 600px; /* Limite la hauteur maximale */
-  width: max-content; /* Garde les proportions de l'image */
-  object-fit: contain; /* Évite de cropper l'image */
+  display: inline-block;
+  position: relative;
 }
 
 .slick-center img {
@@ -108,7 +115,14 @@ body {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 0px 12px 1px rgba(255, 255, 255, 0.576); /* Halo lumineux diffus */
+}
+
+.img-slide {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px; /* Optionnel */
+  object-fit: contain; /* Maintient l'effet 'contain' */
+  width: 100%; /* S'ajuste à la taille du parent */
+  height: auto; /* Respecte les proportions */
 }
 
 /* Style des images dans chaque slide */
@@ -157,6 +171,7 @@ body {
 
 .text-info {
   color: rgba(0, 0, 0, 0.675);
+  font-size: 24px;
 }
 
 .text-card {
