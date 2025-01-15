@@ -152,6 +152,7 @@ const gameDisplayed = ({
                           ? gamesDisplay[actualGame].link
                           : "error server"
                       }
+                      target="_blank"
                     >
                       <img
                         className="logo-jvc"
