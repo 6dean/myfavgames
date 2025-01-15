@@ -118,10 +118,12 @@ const gameDisplayed = ({
                   <p className="text-info text-lg font-semibold">
                     Note Presse{" "}
                   </p>
-                  {typeof actualGame === "number"
-                    ? gamesDisplay[actualGame].jeuxVideoComRating
-                    : "error server"}
-                  <>/20</>
+                  <p className="note-style">
+                    {typeof actualGame === "number"
+                      ? gamesDisplay[actualGame].jeuxVideoComRating
+                      : "error server"}
+                    <span className="note-top">/20</span>
+                  </p>
                 </div>
                 <div className="flex justify-between">
                   <p className="text-info text-lg font-semibold">

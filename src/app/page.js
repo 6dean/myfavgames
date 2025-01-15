@@ -4,6 +4,7 @@ import platformLogos from "./platforms";
 import { useState, useEffect } from "react";
 import Header from "./header";
 import SliderGames from "./slider-details";
+import { LuGamepad2 } from "react-icons/lu";
 import Footer from "./footer";
 
 export default function Home() {
@@ -57,7 +58,12 @@ export default function Home() {
           />
         ) : (
           <div className="empty-container">
-            Choisissez une catégorie pour découvrir mes jeux favoris
+            <span className="empty-text">
+              Choisissez une catégorie pour découvrir mes jeux
+            </span>
+            <span className="empty-icon">
+              <LuGamepad2 size={55} />
+            </span>
           </div>
         )}
       </div>

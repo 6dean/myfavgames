@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <footer>c'est le footer</footer>;
+  return <footer>Powered by NextJs - RF 2025</footer>;
 };
 
 export default Footer;
